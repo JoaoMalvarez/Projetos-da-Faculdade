@@ -3,9 +3,9 @@
  Comente e idente seu programa.
 */
 
-// Carol 
-// Catarina Silva e Meirelles 
-//João Pedro Mazzante Alvarez
+// Carol Hiroko Yamada / RA: 10741647
+// Catarina Silva e Meirelles / RA: 10239324
+//João Pedro Mazzante Alvarez / RA: 10723837
 
 #include <stdio.h>
 #include <stdlib.h>
