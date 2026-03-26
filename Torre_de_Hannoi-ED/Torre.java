@@ -31,4 +31,11 @@ public class Torre<T> {
     public int sizeElements() {
         return torre.sizeElements();
     }
+
+    public T topo() throws Exception {
+        if (torre.isEmpty()) {
+            throw new Exception("Torre vazia.");
+        }
+        return torre.topo();
+    }
 }
