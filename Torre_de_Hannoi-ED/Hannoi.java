@@ -14,7 +14,7 @@ public class Hannoi {
         for (int i = numDiscos; i >= 1; i--) {
             torre1.push (new Disco("*".repeat(i), i), numDiscos); // a forma vai sair *, **, ***...
         } 
-
+        scanner.close();
 
 
         //imprimir os discos
@@ -44,7 +44,13 @@ public class Hannoi {
                 System.out.print("  ".repeat(numDiscos - 7));
             }
         }
+        //Menu
+        System.out.println("Menu");
+        System.out.println("1 - Mover o Disco/n2 - Mostrar Torres/n3 - Reiniciar o Jogo/n4 - Sair");
+        Scanner menu = new Scanner(System.in);
+        int resposta = menu.nextInt();
+        //código do menu
        
-    scanner.close();
+
     }
 }
