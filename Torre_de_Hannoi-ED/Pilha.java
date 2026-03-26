@@ -20,7 +20,7 @@ public class Pilha <T> {
     }
 
     public boolean isFull() {
-        return this.topoPilha == elemntos.length -1;
+        return this.topoPilha == elementos.length -1;
     }
 
     public void push(T e) throws Exception {
@@ -33,8 +33,8 @@ public class Pilha <T> {
         }
     }
 
-    public void pop() throws Exception{
-        if(!this.isEmpty) {
+    public T pop() throws Exception{
+        if(!this.isEmpty()) {
             T temp = this.elementos[topoPilha];
             topoPilha--;
             return temp;
@@ -49,7 +49,7 @@ public class Pilha <T> {
             return this.elementos[topoPilha];
         }
         else {
-            throw new Exception("Underflow: A pilha está vazia")
+            throw new Exception("Underflow: A pilha está vazia");
         }
     }
 
