@@ -10,6 +10,7 @@ public class Hannoi {
         Torre<Disco> torre2 = new Torre<>(Comparator.comparingInt(Disco::getTamanho));  
         Torre<Disco> torre3 = new Torre<>(Comparator.comparingInt(Disco::getTamanho));
         Print<Disco> print = new dequePrint<>();
+        //agr adiciona os 3 prints
         //adicionar os discos na torre 1
         for (int i = numDiscos; i >= 1; i--) {
             torre1.push (new Disco("*".repeat(i), i), numDiscos); // a forma vai sair *, **, ***...
@@ -28,6 +29,7 @@ public class Hannoi {
             //imprime os valores nas torres
             torre1.push(print.getLeft());
             System.out.print(print.dequeueLeft());
+            //coloca nos prints 1 2 3 cada torre respectivamente
             System.out.print("  " .repeat(i));
             torre2.push(print.getLeft());
             System.out.print(print.dequeueLeft());
