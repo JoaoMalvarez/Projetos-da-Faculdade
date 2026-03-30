@@ -9,33 +9,33 @@ public class Torre<T> {
         this.comparator = comparator;
     }
 
-    public void push(T elemento, int numDiscos) throws Exception {
+    // Regra do jogo: só entra se for menor que o topo
+    public void push(T elemento) throws Exception {
         if (torre.isEmpty() || comparator.compare(elemento, torre.topo()) < 0) {
             torre.push(elemento);
         } else {
-            throw new Exception ("Movimento não permitido.");
+            throw new Exception("Movimento Proibido: Disco maior sobre disco menor!");
         }
     }
 
-    public T pop() throws Exception {
-        if (torre.isEmpty()) {
-            throw new Exception("Torre vazia.");
-        }
-        return torre.pop();
+    // Usado apenas para criar o jogo no início
+    public void setupPush(T elemento) throws Exception {
+        torre.push(elemento);
     }
 
-    public boolean isEmpty() {
-        return torre.isEmpty();
+    public T pop() throws Exception { 
+        return torre.pop(); 
     }
-
-    public int sizeElements() {
-        return torre.sizeElements();
+    
+    public boolean isEmpty() { 
+        return torre.isEmpty(); 
     }
-
-    public T topo() throws Exception {
-        if (torre.isEmpty()) {
-            throw new Exception("Torre vazia.");
-        }
-        return torre.topo();
+    
+    public int sizeElements() { 
+        return torre.sizeElements(); 
+    }
+    
+    public T topo() throws Exception { 
+        return torre.topo(); 
     }
 }
